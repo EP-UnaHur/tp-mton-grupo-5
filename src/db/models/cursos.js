@@ -11,13 +11,30 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Cursos.belongsTo(models.Materia, {
+        as: 'materia',
+        foreignKey: 'materiaId'
+      })
+      Cursos.hasMany(models.Curso_Profesor,{
+        as: 'curso_profesores',
+        foreignKey: 'cursoId'
+      })
     }
   }
   Cursos.init({
     comision: DataTypes.STRING,
-    turno: DataTypes.STRING,
-    fechaInicio: DataTypes.DATEONLY,
-    fechaFin: DataTypes.DATEONLY
+    turno: {
+      tipe:DataTypes.STRING,
+      allowNull:false
+    },
+    fechaInicio: {
+      type:DataTypes.DATEONLY,
+    allowNull:false
+    },
+    fechaFin: {
+      type:DataTypes.DATEONLY,
+    allowNull:false
+    }
   }, {
     sequelize,
     modelName: 'Cursos',

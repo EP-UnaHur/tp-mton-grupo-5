@@ -11,13 +11,31 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Materia.belongsTo(models.Carrera, {
+        as: 'carrera',
+        foreignKey: 'carreraId'
+      })
+
+      Materia.hasMany(models.Curso, {
+        as: 'cursos',
+        foreignKey: 'materiaId'
+      })
     }
   }
   Materia.init({
-    nombre: DataTypes.STRING,
-    cuatrimestral: DataTypes.TINYINT,
-    anio: DataTypes.INTEGER,
-    carreraId: DataTypes.INTEGER
+    nombre: {
+      type:DataTypes.STRING,
+      allowNull: false
+    },
+    cuatrimestral: {
+      type:DataTypes.TINYINT,
+      allowNull: false
+    },
+    anio: {
+      type:DataTypes.INTEGER,
+      allowNull: false
+    }
+    
   }, {
     sequelize,
     modelName: 'Materia',
