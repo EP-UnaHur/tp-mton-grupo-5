@@ -1,4 +1,4 @@
-const {Profesor} = require('../models')
+const {Profesor} = require('../db/models')
 
 
 //Obtiene todos los profesores

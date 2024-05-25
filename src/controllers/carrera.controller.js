@@ -1,4 +1,4 @@
-const {Carrera} = require('../models');
+const {Carrera} = require('../db/models');
 
 
 //Obtiene todas las carreras

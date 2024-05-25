@@ -1,4 +1,4 @@
-const {Materia} = require('../models');
+const {Materia} = require('../db/models');
 
 
 //Obtiene todas las materias

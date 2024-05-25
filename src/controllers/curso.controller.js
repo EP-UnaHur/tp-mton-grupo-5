@@ -1,4 +1,4 @@
-const {Curso} = require('../models')
+const {Curso} = require('../db/models')
 
 
 //Obtiene todos los cursos
