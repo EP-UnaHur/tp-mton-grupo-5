@@ -13,7 +13,7 @@ exports.getAllProfesor = async (req,res) => {
 
 
 //Obtiene un profesor por id
-exports.profesorByPk = async (req, res) => {
+exports.profesorById = async (req, res) => {
     try {
         const profesor = await Profesor.findByPk(req.params.id)
         res.status(200).json(profesor)

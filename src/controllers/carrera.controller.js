@@ -32,3 +32,5 @@ exports.carreraById = async (req,res) => {
         res.status(500).json({message: error.message});
     }
 }
+
+//Creamos una materia dentro de una carrera
