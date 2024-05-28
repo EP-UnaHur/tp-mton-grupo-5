@@ -1,7 +1,7 @@
 const { Router } = require('express')
 const router = Router()
 
-const carreraController = require('../controllers/carreraController')
+const carreraController = require('../controllers/carrera.controller')
 
 //Obtengos todas las carreras
 router.get('/carreras', carreraController.getAllCarreras)

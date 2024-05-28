@@ -15,8 +15,9 @@ module.exports = (sequelize, DataTypes) => {
         as: 'materia',
         foreignKey: 'materiaId'
       })
-      Cursos.hasMany(models.Curso_Profesor,{
-        as: 'curso_profesores',
+      Cursos.belongsToMany(models.Profesores,{
+        through: "Curso_Profesor",
+        as: 'profesores',
         foreignKey: 'cursoId'
       })
     }
@@ -24,7 +25,7 @@ module.exports = (sequelize, DataTypes) => {
   Cursos.init({
     comision: DataTypes.STRING,
     turno: {
-      tipe:DataTypes.STRING,
+      type:DataTypes.STRING,
       allowNull:false
     },
     fechaInicio: {
