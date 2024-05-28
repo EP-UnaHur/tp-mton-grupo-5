@@ -1,6 +1,6 @@
 const { Router } = require('express')
 const router = Router()
-const materiaController = require('../controllers/materiaController')
+const materiaController = require('../controllers/materia.controller')
 
 //Obtengo todas las materias
 router.get('/materias', materiaController.getAllMaterias)

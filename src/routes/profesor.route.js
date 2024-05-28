@@ -1,6 +1,6 @@
 const { Router } = require('express')
 const router = Router()
-const profesorController = require('../controllers/profesorController')
+const profesorController = require('../controllers/profesor.controller')
 
 //Obtenemos todos los profesores
 router.get('/profesores', profesorController.getAllProfesor)
