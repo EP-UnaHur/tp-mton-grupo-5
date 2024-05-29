@@ -1,4 +1,6 @@
+const { where } = require('sequelize');
 const {Carreras} = require('../db/models');
+
 
 
 //Obtiene todas las carreras
@@ -43,8 +45,8 @@ exports.crearMateria = async (req, res) => {
     try {
         const carrera = await Carreras.findByPk(req.params.id);
         if(carrera){
-            const materia = await Carreras.create({carreraId:carrera.id,...req.body});
-            res.status(200).json(materia);
+            const materia = await Materia.create({carreraId:carrera.id,...req.body});
+            res.status(201).json(materia);
         }else{
             res.status(404).json({message: "Carrera no encontrada"});
         }
@@ -55,12 +57,13 @@ exports.crearMateria = async (req, res) => {
 }
 
 
+
 //Obtiene todas las materias de una carrera
 exports.getMaterias = async (req, res) => {
     try {
         const carrera = await Carreras.findByPk(req.params.id);
         if(carrera){
-            const materias = await carrera.materias.json();
+            const materias = await carrera.materias.findAll({where : {carreraId : carrera.id}});
             res.status(200).json(materias);
         }else{
             res.status(404).json({message: "Carrera no encontrada"});
