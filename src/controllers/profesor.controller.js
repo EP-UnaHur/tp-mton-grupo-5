@@ -62,3 +62,16 @@ exports.borrarProfesor = async (req, res) => {
         res.status(500).json({message: error.message})
     }
 }
+
+
+//Obtener todos los cursos que tiene un profesor
+exports.cursosPorProfesor = async (req, res) => {
+    try {
+        const profesor = await Profesor.findByPk(req.params.id, {
+            include: [Cursos]
+        })
+        res.status(200).json(profesor)
+    } catch (error) {
+        res.status(400).json({message: error.message})
+    }
+}

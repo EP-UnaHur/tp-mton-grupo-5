@@ -55,8 +55,7 @@ exports.getCursosMateria = async (req, res) => {
     try{
         const materia = await Materia.findByPk(req.params.id);
         if(materia){
-            const cursos = await materia.cursos.findAll({where: {materiaId: materia.id}});
-            res.status(200).json(cursos);
+            const cursos = await materia.findByPk(req.params.id ,{include: [Cursos]});
         }else{
             res.status(404).json({message: "Materia no encontrada"});
         }
