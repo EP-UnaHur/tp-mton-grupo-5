@@ -16,7 +16,7 @@ router.get('/materias/:id', materiaController.materiaById)
 router.delete('/materias/:id', materiaController.deleteMateria)
 
 //Crear una materia
-router.post('/materias',middlewareMateria.validaSchema(materiaSchema), carreraController.crearMateria)
+router.post('/carreras/:id/materia',middlewareMateria.validaSchema(materiaSchema), carreraController.crearMateria)
 
 
 module.exports = router

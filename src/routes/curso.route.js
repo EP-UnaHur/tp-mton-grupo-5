@@ -19,7 +19,7 @@ router.put('/cursos/:id', cursosControlller.modificarCurso)
 //Borramos un curso
 router.delete('/cursos/:id', cursosControlller.deleteCurso)
 
-//Crear un curso
-router.post('/cursos',middlewareCurso.validaSchema(cursoSchema),materiaController.crearCursoMateria)
+//Crear un curso para la materia
+router.post('/materias/:id/curso',middlewareCurso.validaSchema(cursoSchema),materiaController.crearCursoMateria)
 
 module.exports = router
