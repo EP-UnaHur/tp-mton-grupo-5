@@ -16,7 +16,7 @@ const cursoRouter = require('./routes/curso.route')
 //Usamos las rutas 
 app.use(profesorRouter)
 app.use(alumnoRouter)
-app.use( materiaRouter)
+app.use(materiaRouter)
 app.use(cursoRouter)
 
 //importamos dotenv
