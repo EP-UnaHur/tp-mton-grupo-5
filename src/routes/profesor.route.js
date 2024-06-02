@@ -5,7 +5,7 @@ const profesorController = require('../controllers/profesor.controller')
 const existeId = require('../middlewares/exists.middleware')
 const validarSchema = require('../middlewares/validateSchema.middleware')
 const profesorSchema = require('../schemas/profesor.schema')
-const profesorSchema = require('../schemas/profesor.schema')
+
 
 //Obtenemos todos los profesores
 router.get('/profesores', profesorController.getAllProfesor)

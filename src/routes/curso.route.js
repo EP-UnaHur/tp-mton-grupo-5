@@ -31,8 +31,6 @@ router.get('/cursos/:id/profesores', existeId.existsById(Cursos),cursosControlll
 //Creo un curso para una materia
 router.post('/materias/:id/curso',existeId.existsById(Materias),validarSchema.validaSchema(cursoSchema), materiaController.crearCursoMateria)
 
-//Crear un curso para la materia
-router.post('/materias/:id/curso',middlewareCurso.validaSchema(cursoSchema),materiaController.crearCursoMateria)
 
 
 module.exports = router
