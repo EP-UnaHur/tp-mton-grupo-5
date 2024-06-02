@@ -1,4 +1,4 @@
-# Estrategias de Persistencia - TP 2024
+# Estrategias de Persistencia 2024 - TP N°1 
 
 ![DER](nuevoDer.png)
 
@@ -6,9 +6,11 @@
 El motor de base de datos a utilizado es Mysql
 
 ### Intalacion de dependencias
-```npm i sequelize sqlite3```
-```npm i -D sequelize-cli``` 
-```npm i joi``` 
+```1) npm i sequelize sqlite3```
+
+```2) npm i -D sequelize-cli``` 
+
+```3) npm i joi``` 
 
 - Inicializar un proyecto sequelize
 
