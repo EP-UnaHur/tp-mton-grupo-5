@@ -2,14 +2,8 @@
 
 ![DER](nuevoDer.png)
 
-### Descripción del modelo DER
-- Una **Carrera** puede tener muchas materias.
-- Una **Materia** puede se puede dictar en muchos cursos.
-- Un **Curso** puede ser dictado por muchos profesores.
-- Un **Profesor** puede dictar muchos cursos.
-
 ### Base de datos
-El motor de base de datos a utilizar podra ser elegido por los alumnos. La recomendacion es utilizar sqlite para pruebas simple y luego probar con otro motor de base de datos tipo MySql o Postgres.
+El motor de base de datos a utilizado es Mysql
 
 ### Intalacion de dependencias
 ```npm i sequelize sqlite3```
@@ -24,8 +18,7 @@ El motor de base de datos a utilizar podra ser elegido por los alumnos. La recom
   
 ```npm run dev```
 
-## API
-Implementar la API utilizando el framework express en el entorde de ejecucion de un poryecto NodeJs. Organizar el código en rutas, controlers y middleware utilizando la separación por recurso. A continuación se detallan los endpoinds que deberán estar disponbiles en la API.
+## Endpoints disponibles
 
 |Verbo|Recurso|Status code|Descripción|
 |-----|-------|-----------|-----------|
