@@ -1,5 +1,6 @@
 const Joi = require('joi')
 const validateDate = require('../date.validator')
+<<<<<<< HEAD
 
 const profesorSchema = Joi.object().keys({
     nombre: Joi.string().required().min(1).max(20).messages({
@@ -20,6 +21,14 @@ const profesorSchema = Joi.object().keys({
     activo: Joi.number().integer().required().min(1).max(20).messages({
         "number.min": `activo debe tener al menos {#limit} caracteres.`,
         "number.max": `activo debe tener como máximo {#limit} caracteres.`,
+        "string.min": `legajo debe tener al menos {#limit} caracters.`,
+        "string.max": `legajo debe tener como máximo {#limit} caracters.`,
+    }),
+
+    activo: Joi.number().integer().required().min(1).max(20).messages({
+        "string.min": `activo debe tener al menos {#limit} caracters.`,
+        "string.max": `activo debe tener como máximo {#limit} caracters.`,
+        "string.empty": "activo no puede ser vacio",
         "any.required": "El campo activo es obligatorio"
     })
    

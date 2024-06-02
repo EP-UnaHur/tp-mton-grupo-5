@@ -5,9 +5,8 @@ const validarSchema =require('../middlewares/validateSchema.middleware')
 const existeId = require('../middlewares/exists.middleware')
 const carreraSchema = require('../schemas/carrera.schema')
 const materiaSchema = require('../schemas/materia.schema')
-
 const carreraController = require('../controllers/carrera.controller')
-
+const carreraController = require('../controllers/carrera.controller')
 //Obtengos todas las carreras
 router.get('/carreras', carreraController.getAllCarreras)
 

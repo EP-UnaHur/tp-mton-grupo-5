@@ -10,20 +10,22 @@ const db = require('./db/models')
 //importamos las rutas
 const profesorRouter = require('./routes/profesor.route')
 const alumnoRouter = require('./routes/carrera.route')
+const CarreraRouter = require('./routes/carrera.route')
 const materiaRouter = require('./routes/materia.route')
 const cursoRouter = require('./routes/curso.route')
 
 //Usamos las rutas 
 app.use(profesorRouter)
 app.use(alumnoRouter)
-app.use( materiaRouter)
+app.use(materiaRouter)
 app.use(cursoRouter)
+app.use(CarreraRouter)
+
+//importamos path
+const path = require('path')
 
 //importamos dotenv
-const dotenv = require('dotenv')
-
-//declaramos las variables de entorno
-dotenv.config({path:'../variables.env'})
+require('dotenv').config( {path:'./variables.env'})
 console.log(process.env.PORT)
 
 //declaramos la variable de entorno

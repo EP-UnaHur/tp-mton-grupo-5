@@ -16,11 +16,18 @@
   "author": "Grupo xxxxxxxxx",
   "license": "MIT",
   "devDependencies": {
+<<<<<<< HEAD
+=======
+    "dotenv": "^16.4.5",
+>>>>>>> 3e2a85b0ce5e6d8519163f944f73ae7306bc014c
     "nodemon": "^3.1.0",
     "sequelize-cli": "^6.6.2"
   },
   "dependencies": {
+<<<<<<< HEAD
     "dotenv": "^16.4.5",
+=======
+>>>>>>> 3e2a85b0ce5e6d8519163f944f73ae7306bc014c
     "express": "^4.19.2",
     "joi": "^17.13.1",
     "sequelize": "^6.37.3",
