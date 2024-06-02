@@ -3,6 +3,9 @@ const router = Router()
 
 const carreraController = require('../controllers/carrera.controller')
 
+const middlewareCarrera = require('../middleware/existe.middleware')
+const carreraSchema = require('../schemas/carrera.schema')
+
 //Obtengos todas las carreras
 router.get('/carreras', carreraController.getAllCarreras)
 
@@ -10,7 +13,7 @@ router.get('/carreras', carreraController.getAllCarreras)
 router.get('/carreras/:id', carreraController.carreraById)
 
 //Crear una carrera
-router.post('/carreras', carreraController.crearCarrera)
+router.post('/carreras',middlewareCarrera.validaSchema(carreraSchema), carreraController.crearCarrera)
 
 
 module.exports = router

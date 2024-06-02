@@ -1,5 +1,5 @@
 const Joi = require('joi')
-const validateDate = require('../ultis/date.validator')
+const validateDate = require('../date.validator')
 const { INTEGER } = require('sequelize')
 
 const profesorSchema = Joi.object().keys({
