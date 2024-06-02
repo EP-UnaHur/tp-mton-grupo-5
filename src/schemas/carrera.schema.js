@@ -17,7 +17,7 @@ const carreraSchema = Joi.object().keys({
         "string.min": `universidad debe tener al menos {#limit} caracters.`,
         "string.max": `universidad debe tener como máximo {#limit} caracters.`,
         "string.empty": "universidad no puede ser vacio",
-        "any.required": "El campo grado es obligatorio"
+        "any.required": "El campo universidad es obligatorio"
     })
    
 })

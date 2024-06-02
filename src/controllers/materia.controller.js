@@ -1,4 +1,5 @@
 const {Materia} = require('../db/models');
+const {Cursos} = require('../db/models');
 
 
 //Obtiene todas las materias
@@ -55,7 +56,10 @@ exports.getCursosMateria = async (req, res) => {
     try{
         const materia = await Materia.findByPk(req.params.id);
         if(materia){
-            const cursos = await Materia.findByPk(req.params.id ,{include: [Cursos]});
+            const cursos = await Materia.findByPk(
+                req.params.id ,
+                {include: [{model:Cursos,as:"cursos"}]
+            });
             res.status(201).json(cursos);
         }else{
             res.status(404).json({message: "Materia no encontrada"});

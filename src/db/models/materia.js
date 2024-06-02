@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       Materia.belongsTo(models.Carreras, {
         as: 'carrera',
-        foreignKey: 'carreraId'
+        foreignKey: 'carrera_Id'
       })
 
       Materia.hasMany(models.Cursos, {
@@ -39,6 +39,8 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'Materia',
+    tableName: 'Materias',
+    timestamps:false
   });
   return Materia;
 };

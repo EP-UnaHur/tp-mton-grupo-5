@@ -68,7 +68,7 @@ exports.borrarProfesor = async (req, res) => {
 exports.cursosPorProfesor = async (req, res) => {
     try {
         const profesor = await Profesor.findByPk(req.params.id, {
-            include: [Cursos]
+            include: [{model:Cursos,as:"cursos"}]
         })
         res.status(200).json(profesor)
     } catch (error) {

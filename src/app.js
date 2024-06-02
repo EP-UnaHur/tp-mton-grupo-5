@@ -19,8 +19,18 @@ app.use(alumnoRouter)
 app.use( materiaRouter)
 app.use(cursoRouter)
 
+//importamos dotenv
+const dotenv = require('dotenv')
 
-app.listen(3000,async () => {
+//declaramos las variables de entorno
+dotenv.config({path:'../variables.env'})
+console.log(process.env.PORT)
+
+//declaramos la variable de entorno
+const port = process.env.PORT || 3000
+
+app.listen(port,async () => {
+    
     try {
         //Esto verifica si me pude conectar bien a la base de datos
          await db.sequelize.authenticate()

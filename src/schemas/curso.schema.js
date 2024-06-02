@@ -1,5 +1,5 @@
 const Joi = require('joi')
-const validateDate = require('../ultis/date.validator')
+const validateDate = require('../date.validator')
 
 const cursoSchema = Joi.object().keys({
     comision: Joi.string().required().min(1).max(10).messages({

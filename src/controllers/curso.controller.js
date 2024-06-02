@@ -77,10 +77,8 @@ exports.profesoresEnCurso = async (req, res) => {
     try{
         const curso = await Cursos.findByPk(req.params.id)
         if(curso){
-            const profesores = await Profesores.findAll({
-                where: {
-                    cursoId: curso.id
-                }
+            const profesores = await Cursos.findByPk(req.params.id, {
+                include: [{model:Profesores, as:"profesores"}]
             })
             res.status(202).json(profesores)
         }else{
