@@ -45,6 +45,8 @@ El motor de base de datos a utilizado es Mysql
 |Delete|/profesores/:id|200, 404, 500|Borrar un profesor
 |Post|/cursos/:id/profesores|201, 404, 400|Crea la asociacion curso con 1 o N profesores
 |Get|/cursos/:id/profesores|202, 404|Obtener todos los profesores de un Curso
-|Get|/profesores/:id/cursos|200, 400|Obtener todos los curso que tiene un profesro
+|Get|/profesores/:id/cursos|200, 400|Obtener todos los curso que tiene un profesor
+
+## El proyecto cuenta con un archivo .json para ejecutar desde el postman donde puede comprobarse los endpoints 
 
 
