@@ -9,7 +9,7 @@ const { Cursos } = require("../db/models");
 const profesorSchema = require("../schemas/profesor.schema");
 
 //Obtenemos todos los cursos
-router.get("/cusos", cursosControlller.getAllCursos);
+router.get("/cursos", cursosControlller.getAllCursos);
 
 //Obtenemos un curso por id
 router.get(
