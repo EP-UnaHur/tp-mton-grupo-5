@@ -22,17 +22,25 @@ exports.cursoById = async (req, res) => {
   }
 };
 
-//modifica un curso
 exports.modificarCurso = async (req, res) => {
   try {
-    const curso = await Cursos.update(...req.body, {
-      where: {
-        id: req.params.id,
-      },
-    });
-    res.status(200).json(curso);
+      const cursoId = req.params.id;
+      const { comision, turno, fechaInicio, fechaFin } = req.body;
+
+      const curso = await Cursos.findByPk(cursoId);
+      if (!curso) {
+          return res.status(404).json({ message: "Curso no encontrado" });
+      }
+
+      curso.comision = comision;
+      curso.turno = turno;
+      curso.fechaInicio = fechaInicio;
+      curso.fechaFin = fechaFin;
+
+      await curso.save();
+      res.status(200).json(curso);
   } catch (error) {
-    res.status(500).json({ message: error.message });
+      res.status(500).json({ message: error.message });
   }
 };
 

@@ -30,7 +30,7 @@ exports.deleteMateria = async (req, res) => {
     await Materia.destroy({ where: { id: req.params.id } });
     res
       .status(200)
-      .json(`Materia ${JSON.stringify(materia.nombre)} eliminada correctamente`);
+      .json(`Materia ${materia.nombre} eliminada correctamente`);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
