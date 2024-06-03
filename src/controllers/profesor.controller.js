@@ -33,15 +33,12 @@ exports.crearProfesor = async (req, res) => {
 
 exports.modificarProfesor = async (req, res) => {
   try {
-    // Extraer los datos que deseas actualizar del cuerpo de la solicitud (req.body)
     const { nombre, fechaNacimiento,legajo,activo } = req.body;
-
-    // Realizar la actualización utilizando el método update() de Sequelize
     const numFilasActualizadas = await Profesores.update(
       {nombre, fechaNacimiento,legajo,activo }, 
       {
         where: {
-          id: req.params.id, // Condición para la actualización
+          id: req.params.id, 
         },
       }
     );
