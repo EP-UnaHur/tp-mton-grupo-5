@@ -27,9 +27,11 @@ exports.materiaById = async (req, res) => {
 exports.deleteMateria = async (req, res) => {
   try {
     const nombre = await Materia.findByPk(req.params.id);
-    await Materia.destroy({ where: { id: req.params.id } });
     console.log(nombre);
-    res.status(200).json(`Materia ${nombre} eliminada correctamente`);
+    await Materia.destroy({ where: { id: req.params.id } });
+    res
+      .status(200)
+      .json(`Materia ${JSON.stringify(nombre)} eliminada correctamente`);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
