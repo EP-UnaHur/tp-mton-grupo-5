@@ -1,6 +1,5 @@
 const Joi = require('joi')
 const validateDate = require('../date.validator')
-<<<<<<< HEAD
 
 const profesorSchema = Joi.object().keys({
     nombre: Joi.string().required().min(1).max(20).messages({
