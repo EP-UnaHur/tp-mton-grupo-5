@@ -1,4 +1,4 @@
-# Estrategias de Persistencia 2024 - TP N°1 
+﻿# Estrategias de Persistencia 2024 - TP N°1 
 
 ![DER](nuevoDer.png)
 
@@ -47,6 +47,6 @@ El motor de base de datos a utilizado es Mysql
 |Get|/cursos/:id/profesores|202, 404|Obtener todos los profesores de un Curso
 |Get|/profesores/:id/cursos|200, 400|Obtener todos los curso que tiene un profesor
 
-## El proyecto cuenta con un archivo .json para ejecutar desde el postman donde puede comprobarse los endpoints 
+## El proyecto cuenta con el archivo Persistencia.postman_collection_v2.json para importarlo desde el postman donde puede comprobarse los endpoints con mayor facilidad
 
 
