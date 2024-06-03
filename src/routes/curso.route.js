@@ -36,7 +36,7 @@ router.delete(
 router.post(
   "/cursos/:id/profesores",
   middlewares.existsById(Cursos),
-  middlewares.validaSchema(profesorSchema),
+  //middlewares.validaSchema(profesorSchema),
   cursosControlller.crearProfesoresEnCurso
 );
 
