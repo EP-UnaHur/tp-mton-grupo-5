@@ -20,6 +20,8 @@ El motor de base de datos a utilizado es Mysql
   
 ```npm run dev```
 
+## El proyecto cuenta con el archivo Persistencia.postman_collection_v2.json para importarlo desde el postman donde puede comprobarse los endpoints con mayor facilidad
+
 ## Endpoints disponibles
 
 |Verbo|Recurso|Status code|Descripción|
@@ -46,7 +48,5 @@ El motor de base de datos a utilizado es Mysql
 |Post|/cursos/:id/profesores|201, 404, 400|Crea la asociacion curso con 1 o N profesores
 |Get|/cursos/:id/profesores|202, 404|Obtener todos los profesores de un Curso
 |Get|/profesores/:id/cursos|200, 400|Obtener todos los curso que tiene un profesor
-
-## El proyecto cuenta con el archivo Persistencia.postman_collection_v2.json para importarlo desde el postman donde puede comprobarse los endpoints con mayor facilidad
 
 
