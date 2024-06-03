@@ -1,7 +1,7 @@
 const { Router } = require("express");
 const router = Router();
 const materiaController = require("../controllers/materia.controller");
-const { Materias } = require("../db/models");
+const { Materia } = require("../db/models");
 const cursosControlller = require("../controllers/curso.controller");
 const middlewares = require("../middleware/exists.middleware");
 const cursoSchema = require("../schemas/curso.schema");
@@ -50,7 +50,7 @@ router.get(
 //Creo un curso para una materia
 router.post(
   "/materias/:id/curso",
-  middlewares.existsById(Materias),
+  middlewares.existsById(Materia),
   middlewares.validaSchema(cursoSchema),
   materiaController.crearCursoMateria
 );

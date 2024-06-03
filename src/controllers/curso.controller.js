@@ -39,12 +39,14 @@ exports.modificarCurso = async (req, res) => {
 //borra un curso
 exports.deleteCurso = async (req, res) => {
   try {
+    const cursoNombre = await Cursos.findByPk(req.params.id);
+
     const curso = await Cursos.destroy({
       where: {
         id: req.params.id,
       },
     });
-    res.status(200).json(curso);
+    res.status(200).json(`Curso ${cursoNombre.comision} eliminado correctamente`);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
